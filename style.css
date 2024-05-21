@@ -1,0 +1,32 @@
+img.img-fluid {
+    margin: auto;
+}
+
+button.learnmorebutton {
+    background-color: rgba(248, 184, 89, 0.486);
+    text-align: center;
+    color: black;
+    display: block;
+    margin-bottom: auto;
+    margin:auto;
+}
+
+@keyframes moveForward {
+    from {
+        transform: scale(1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+.intro {
+    animation: moveForward 2s forwards;
+}
+
+p {
+    padding-top: 140px;
+}
