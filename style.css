@@ -7,8 +7,7 @@ button.learnmorebutton {
     text-align: center;
     color: black;
     display: block;
-    margin-bottom: auto;
-    margin:auto;
+    margin: auto;
 }
 
 @keyframes moveForward {
@@ -22,11 +21,24 @@ button.learnmorebutton {
     }
 }
 
-
 .intro {
     animation: moveForward 2s forwards;
 }
 
 p {
     padding-top: 140px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('imgs/parallax-background.jpg');
+
+    /* Set a specific height */
+    min-height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
