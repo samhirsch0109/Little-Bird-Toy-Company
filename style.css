@@ -1,27 +1,52 @@
 body {
-    background-color: rgb(245, 213, 178);    
+    background-color: rgb(245, 213, 178);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* To prevent horizontal scrollbar */
 }
 
-img.img-fluid {
-    margin: auto;
-    padding-top: 30px;
-    margin-top: 100px;
-    position: relative;
-    top: 50%;
-    justify-content: center;
+.parallax {
+    /* The image used */
+    background-image: url('imgs/Main Logo.png');
+
+    /* Set a specific height */
+    height: 500px; /* Adjust this height according to your needs */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.intropara {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+}
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
 
-a.learnmorebutton {
-    background-color: rgba(248, 184, 89, 0.486);
-    background-color: #dae4da; /* Green */
-    color: white;
-    border: 3px;
-    border-color: pink;
-    border-radius: 5px;
-    cursor: pointer;
-    /* Effects on hover */
-    margin: auto;
+.learnmorebutton {
+        background-color: rgba(248, 184, 89, 0.486);
+        color: rgb(114, 87, 87);
+        border: 3px solid pink; /* Changed border style */
+        border-radius: 5px;
+        cursor: pointer;
+        /* Effects on hover */
+        margin-top: 100px; /* Adjust margin-top to move the button down */
+        padding: 10px 20px; /* Added padding for better appearance */
+        font-size: 25px;
+        text-decoration: none;
+        box-shadow: 5px 5px 5px;
+        font-family: "ff-more-web-pro", serif;
+      font-weight: 600;
+      font-style: italic;
+}
+     
+.learnmorebutton:hover {
+    background-color: rgb(207, 164, 119);
 }
 
 @keyframes moveForward {
@@ -43,3 +68,4 @@ a.learnmorebutton {
     font-family: "Quicksand", sans-serif;
     text-align: center;
 }
+
