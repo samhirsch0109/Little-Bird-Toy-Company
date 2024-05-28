@@ -1,167 +1,179 @@
 body {
-    background-color: rgb(245, 213, 178);
-    margin: 0;
-    padding: 0;
+  background-color: rgb(245, 213, 178);
+  margin: 0;
+  padding: 0;
 }
 
 .parallax {
-    /* The image used */
-    background-image: url('imgs/Main Logo.png');
+  /* The image used */
+  background-image: url('imgs/Main Logo.png');
 
-    /* Set a specific height */
-    height: 1000px; /* Adjust this height according to your needs */
+  /* Set a specific height */
+  height: 1000px; /* Adjust this height according to your needs */
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .intropara {
-    font-family: "Quicksand", sans-serif;
-    text-align: center;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
 }
+
 a {
-    color: inherit; 
-    text-decoration: none; 
+  color: inherit; 
+  text-decoration: none; 
 }
 
 .learnmorebutton {
-        background-color: rgba(248, 184, 89, 0.486);
-        color: rgb(114, 87, 87);
-        border: 3px solid pink; /* Changed border style */
-        border-radius: 5px;
-        cursor: pointer;
-        /* Effects on hover */
-        margin-top: 100px; /* Adjust margin-top to move the button down */
-        padding: 10px 20px; /* Added padding for better appearance */
-        font-size: 25px;
-        text-decoration: none;
-        box-shadow: 5px 5px 5px;
-        font-family: "ff-more-web-pro", serif;
-      font-weight: 600;
-      font-style: italic;
+  background-color: rgba(248, 184, 89, 0.486);
+  color: rgb(114, 87, 87);
+  border: 3px solid pink; /* Changed border style */
+  border-radius: 5px;
+  cursor: pointer;
+  /* Effects on hover */
+  margin-top: 100px; /* Adjust margin-top to move the button down */
+  padding: 10px 20px; /* Added padding for better appearance */
+  font-size: 25px;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px;
+  font-family: "ff-more-web-pro", serif;
+  font-weight: 600;
+  font-style: italic;
 }
-     
+
 .learnmorebutton:hover {
-    background-color: rgb(207, 164, 119);
+  background-color: rgb(207, 164, 119);
 }
 
 @keyframes moveForward {
-    from {
-        transform: scale(1);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1.2);
-        opacity: 1;
-    }
+  from {
+      transform: scale(1);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1.2);
+      opacity: 1;
+  }
 }
 
 .intro {
-    animation: moveForward 5s forwards;  
+  animation: moveForward 5s forwards;  
 }
 
-.intropara{
-    font-family: "Quicksand", sans-serif;
-    text-align: center;
+.intropara {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
 }
 
 .site-footer {
-    background-color: #eed8be;
-    padding: 45px 0 20px;
-    font-size: 15px;
-    line-height: 24px;
-    color: #737373;
-    width: 100%;
-    margin-top: 100px;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  .site-footer hr {
-    border-top-color: #bbb;
-    opacity: 0.5;
-  }
-  
-  .site-footer hr.small {
-    margin: 20px 0;
-  }
-  
-  .site-footer h6 {
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 5px;
-    letter-spacing: 2px;
-  }
-  
-  .site-footer a {
-    color: #737373;
-  }
-  
-  .site-footer a:hover {
-    color: #ccb833;
-    text-decoration: none;
-  }
-  
-  .footer-links {
-    padding-left: 0;
-    list-style: none;
-  }
-  
-  .footer-links li {
-    display: block;
-  }
-  
-  .footer-links a {
-    color: #1506e5;
-  }
-  
-  .footer-links a:active,
-  .footer-links a:focus,
-  .footer-links a:hover {
-    color: #3366cc;
-    text-decoration: none;
-  }
-  
-  .footer-links.inline li {
-    display: inline-block;
-  }
-  
-  .site-footer .social-icons {
-    text-align: right;
-  }
-  
-  .site-footer .social-icons a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin-left: 6px;
-    margin-right: 0;
-    border-radius: 100%;
-    background-color: #33353d;
-  }
-  
-  .copyright-text {
-    margin: 0;
-  }
+  background-color: #eed8be;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+}
 
-  .abouttext{
-    text-align: center;
-    font-family: "Neucha", cursive;
-    font-size: 22px;
-  }
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
 
-  p.one {
-    margin-top: 5px;
-  }
+.site-footer hr.small {
+  margin: 20px 0;
+}
 
-  p.two {
-    margin-top: 5px;
-  }
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.site-footer a {
+  color: #737373;
+}
+
+.site-footer a:hover {
+  color: #ccb833;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  display: block;
+}
+
+.footer-links a {
+  color: #1506e5;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+
+.site-footer .social-icons {
+  text-align: right;
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+.abouttext {
+  text-align: center;
+  font-family: "Neucha", cursive;
+  font-size: 22px;
+}
+
+p.one {
+  margin-top: 5px;
+}
+
+p.two {
+  margin-top: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+}
 
 img.img-fluid {
-    margin-top: 200px;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
