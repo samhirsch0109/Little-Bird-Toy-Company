@@ -16,15 +16,21 @@ const toyOptions = [
     {
         name: "Wooden Boat",
         age: "All ages",
-        Measure: "Large size (84cm L x 11cm H x 13cm W)",
+        Measure: " 10.5 inch W x 3.5 inch H.",
         biography: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety. Includes two peg lobster people.",
         imageURL: ""
     },
     {
         name: "Wooden Block Set",
+        age: "Three and older",
+        Measure: "13” L x 12” W x 2” H",
+        biography: " Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate",
+        imageURL: ""
+    },
+    {
+        name: "Wooden Car",
         age: "All ages",
-        Measure: "Large size (84cm L x 11cm H x 13cm W)",
-        biography: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety. Includes two peg lobster people.",
+        biography: "This heirloom-quality wooden car is a timeless treasure. Handcrafted from domestic and exotic hardwoods with a clear lacquer finish, this unique car will inspire generations of imaginative play. Please note potential choking hazards for small children.",
         imageURL: ""
     },
 ];
@@ -39,7 +45,7 @@ function generateToyCards() {
         let borderColor;
         switch (option.name.toLowerCase()) {
             case 'wooden airplane':
-                borderColor = "orange";
+                borderColor = "black";
                 break;
             // Add more cases if needed
             default:
@@ -49,7 +55,7 @@ function generateToyCards() {
         let backgroundColor;
         switch (option.age.toLowerCase()) {
             case 'toddlers':
-                backgroundColor = "lightgreen";
+                backgroundColor = "orange";
                 break;
             // Add more cases if needed
             default:
