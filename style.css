@@ -224,3 +224,14 @@ a.nav-link {
 .card {
   height: 100%;
 }
+
+li.nav-item {
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  color: rgb(114, 87, 87);
+}
+
+.tab-pane fade {
+  color: pink;
+}
