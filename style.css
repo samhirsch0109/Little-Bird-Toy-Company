@@ -312,3 +312,11 @@ padding: right;
 h3 {
   font-size: small;
 }
+
+#review {
+  color: rgb(224, 199, 153);
+}
+
+#displayRandomReview {
+  margin-top: 100px;
+}

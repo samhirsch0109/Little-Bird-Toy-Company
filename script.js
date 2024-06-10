@@ -151,70 +151,24 @@ function removeFromCart(index) {
 window.onload = generateToyCards;
 window.onload = generateToyCards;
 
-const nameArray = [] //Create a list to store names
 
-function addName() {
-  //get a trimmed version of the name from the input box
-  //where names get input and if nothing is written it comes out blank
-  const nameInput = document.getElementById('nameInput')
-  const name = nameInput.value.trim()
-  nameArray.push(name)
-  displayNames()
-  nameInput.value = ''
+const reviews = [
+    'The best toys, would recommend buying for your children',
+    'Great toys, great store!',
+    'My train did not meet my expectations, I expected to have working lights, like hello?',
+    'I was pleasantly surprised, great toys and store had great atmosphere',
+    'You should visit the store today',
+    'The toys were ok quality',
+    'OMGGGGGGG!!! Im totally getting these for my precious little angels. it will fit perfectly in their netural pallete bedrooms, for display only of course, theyre ipad kids lol',
+    'these toys remind me of back in my day without phones when we played with wood, good ol days',
+    'ouch! they gave me a splinter, oh wait nevermind im okay not a splinter, they are well made toys!,'
+];
 
+function getRandomReview(reviews) {
+    return reviews[Math.floor(Math.random() * reviews.length)];
+} 
+
+function displayRandomReview() {
+    const randomReview = getRandomReview(reviews);
+    document.getElementById("review").innerHTML = `<h5 class="text-center">Random Review: ${randomReview}</h5>`;
 }
-//allows you to keep adding names and stores them into a list  
-function displayNames() {
-  const nameList = document.getElementById('nameList')//get UL element 
-  nameList.innerHTML = '' //clears the list 
-
-  for (let i = 0; i < nameArray.length; i++) {
-    const name = nameArray[i] //get the current name from the array
-
-    const li = document.createElement('li')
-    li.className = 'list-group-item'
-
-    const span = document.createElement('span')
-    span.textContent = name
-
-    li.appendChild(span)
-    nameList.appendChild(li)
-
-  }
- 
-}
-
-//assigns each name a number and picks one of the random numbers and a name with that number gets displayed
-function pickRandomName(){
-  const randomNameDiv = document.getElementById('randomName')
-  randomNameDiv.textContent = ''
-
-
-  const randomNumber = Math.floor(Math.random() * nameArray.length)
-  const randomName = nameArray[randomNumber]
-
-  randomNameDiv.innerHTML = `Your review: <span class="color">${randomName}</span>`
- 
-}
-
-//assigns each name a number and random number is chosen and name with that number gets displayed but after each one it deletes the name that it chooses
-function deleteName(){
-  const randomNameDiv = document.getElementById('randomName')
-  randomNameDiv.textContent = ''
-
-  const randomNumber = Math.floor(Math.random() * nameArray.length)
-  const randomName = nameArray[randomNumber]
-
-  randomNameDiv.innerHTML = `Congrats <span class="color">${randomName}</span>, you were chosen!`
-
-  nameArray.splice(randomNumber, 1)
-  displayNames()
-}
-
-// add onclick to add name btn
-//button that adds the name
-document.getElementById('addNameBtn').addEventListener('click', addName)
-
-//buttons that generate name
-document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName)
-
