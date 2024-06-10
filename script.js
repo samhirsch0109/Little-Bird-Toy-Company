@@ -4,8 +4,8 @@ const toyOptions = [
         age: "Toddlers",
         Measure: "3.5H x 7L x 7W.",
         biography: "Soar through imaginative skies with this classic wooden airplane. Handcrafted from sustainable Baltic birch wood with a safe, natural harvest finish and a spinning propeller.",
-        imageURLs: ["imgs/pinkplane.png", "imgs/orangeplane.png", "imgs/purpleplane.png"],
-        price: "$15.99"
+        imageURLs: ["imgs/pinkplane.png", "imgs/orangeplane2.png", "imgs/purpleplane.png"],
+        price: 15.99
     },
     {
         name: "Wooden Train Set",
@@ -13,7 +13,7 @@ const toyOptions = [
         Measure: "Large size (84cm L x 11cm H x 13cm W)",
         biography: "Embark on a charming journey with this beautiful handcrafted wooden train set. Engine and three interchangeable cars boast intricate details made from real beech wood with moving wheels and a fully ecological design",
         imageURLs: ["imgs/pinktrain.png", "imgs/orangetrain.png", "imgs/purpletrain.png"],
-        price: "$15.99"
+        price: 15.99
     },
     {
         name: "Wooden Boat",
@@ -21,7 +21,7 @@ const toyOptions = [
         Measure: "10.5 inch W x 3.5 inch H.",
         biography: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety. Includes two peg lobster people.",
         imageURLs: ["imgs/pinkboat.png", "imgs/redboat.png", "imgs/purpleboat.png"],
-        price: "$15.99"
+        price: 15.99
     },
     {
         name: "Wooden Block Set",
@@ -29,16 +29,19 @@ const toyOptions = [
         Measure: "13” L x 12” W x 2” H",
         biography: "Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate",
         imageURLs: ["imgs/pinkblocks.png", "imgs/greenblocks.png", "imgs/purpleblocks.png"],
-        price: "$20.00"
+        price: 20.00
     },
     {
         name: "Wooden Car",
         age: "All ages",
         biography: "This heirloom-quality wooden car is a timeless treasure. Handcrafted from domestic and exotic hardwoods with a clear lacquer finish, this unique car will inspire generations of imaginative play. Please note potential choking hazards for small children.",
         imageURLs: ["imgs/pinkcar.png", "imgs/redcar.png", "imgs/purplecar.png"],
-        price: "$9.99"
+        price: 9.99
     },
 ];
+
+let cart = [];
+let total = 0;
 
 function generateToyCards() {
     const toyCardsContainer = document.getElementById('toyCards');
@@ -99,8 +102,8 @@ function generateToyCards() {
                     <p><strong>Age:</strong> ${option.age}</p>
                     <p><strong>Measure:</strong> ${option.Measure}</p>
                     <p><strong>Biography:</strong> ${option.biography}</p>
-                    <p><strong>Price:</strong> ${option.price}</p>
-
+                    <p><strong>Price:</strong> $${option.price.toFixed(2)}</p>
+                    <button class="btn btn-primary" onclick="addToCart(${index})">Add to Cart</button>
                 </div>
             </div>
         `;
@@ -109,7 +112,43 @@ function generateToyCards() {
     });
 }
 
+//adds product to the cart
+function addToCart(index) {
+    const toy = toyOptions[index];
+    //adds toy to array
+    cart.push(toy);
+    total += toy.price;
+    updateCart();
+}
+//update cart display
+function updateCart() {
+    const cartContainer = document.getElementById('cart');
+    cartContainer.innerHTML = '';
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <span>${item.name} - $${item.price.toFixed(2)}</span>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+            `;
+            cartContainer.appendChild(cartItem);
+        });
+    }
+    //update total price
+    document.getElementById('total').textContent = total.toFixed(2);
+}
 
+function removeFromCart(index) {
+    const item = cart[index];
+    total -= item.price;
+    cart.splice(index, 1);
+    updateCart();
+}
+
+window.onload = generateToyCards;
 window.onload = generateToyCards;
 
 const nameArray = [] //Create a list to store names
