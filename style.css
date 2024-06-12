@@ -54,11 +54,6 @@ a {
   animation: moveForward 5s forwards;
 }
 
-.intropara {
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-}
-
 .site-footer {
   background-color: #eed8be;
   padding: 45px 0 20px;
@@ -165,7 +160,7 @@ img.img-fluid {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 600px;
 }
 
 a.nav-link {
@@ -286,21 +281,22 @@ h3 {
 
 #review {
   color: rgb(0, 0, 0);
-  font-family: "Oswald", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+
 }
 
 #displayRandomReview {
   margin-top: 100px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 button {
-  color: rgb(246, 213, 153);
   border: none;
   margin-top: 30px;
   box-shadow: inset;
   padding: 10px 20px;
-  background-color: #fbfcfb;
-  color: rgb(0, 0, 0);
+  background-color: #c9c8c8;
+  color: rgb(255, 218, 162);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -308,4 +304,8 @@ button {
   margin: 5px;
   margin-top: 30px;
  font-family: "Kanit", sans-serif; 
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
 }
