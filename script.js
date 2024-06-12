@@ -132,7 +132,7 @@ function updateCart() {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
                 <span>${item.name} - $${item.price.toFixed(2)}</span>
-                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove Item</button>
             `;
             cartContainer.appendChild(cartItem);
         });
@@ -149,9 +149,8 @@ function removeFromCart(index) {
 }
 
 window.onload = generateToyCards;
-window.onload = generateToyCards;
 
-
+//array of reviews
 const reviews = [
     'The best toys, would recommend buying for your children',
     'Great toys, great store!',
@@ -166,9 +165,9 @@ const reviews = [
 
 function getRandomReview(reviews) {
     return reviews[Math.floor(Math.random() * reviews.length)];
-} 
+}
 
 function displayRandomReview() {
     const randomReview = getRandomReview(reviews);
-    document.getElementById("review").innerHTML = `<h5 class="text-center">Random Review: ${randomReview}</h5>`;
+    document.getElementById("review").innerHTML = `<h5 class="text-center">Anonymous Review: ${randomReview}</h5>`;
 }

@@ -5,38 +5,27 @@ body {
 }
 
 .parallax {
-  /* The image used */
   background-image: url('imgs/Main Logo.png');
-
-  /* Set a specific height */
-  height: 1000px; /* Adjust this height according to your needs */
-
-  /* Create the parallax scrolling effect */
+  height: 1000px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.intropara {
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-}
-
 a {
-  color: inherit; 
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
 }
 
 .learnmorebutton {
   background-color: rgba(248, 184, 89, 0.486);
   color: rgb(114, 87, 87);
-  border: none; /* Changed border style */
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* Effects on hover */
-  margin-top: 100px; /* Adjust margin-top to move the button down */
-  padding: 10px 20px; /* Added padding for better appearance */
+  margin-top: 100px;
+  padding: 10px 20px;
   font-size: 25px;
   text-decoration: none;
   box-shadow: 5px 5px 5px;
@@ -51,17 +40,18 @@ a {
 
 @keyframes moveForward {
   from {
-      transform: scale(1);
-      opacity: 0;
+    transform: scale(1);
+    opacity: 0;
   }
+
   to {
-      transform: scale(1.2);
-      opacity: 1;
+    transform: scale(1.2);
+    opacity: 1;
   }
 }
 
 .intro {
-  animation: moveForward 5s forwards;  
+  animation: moveForward 5s forwards;
 }
 
 .intropara {
@@ -102,7 +92,6 @@ a {
 }
 
 .site-footer a:hover {
-  color: #ccb833;
   text-decoration: none;
 }
 
@@ -180,8 +169,9 @@ img.img-fluid {
 }
 
 a.nav-link {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Roboto Slab", serif;
 }
+
 .hover-nav ul {
   list-style: none;
   margin: 0;
@@ -232,10 +222,6 @@ li.nav-item {
   color: rgb(114, 87, 87);
 }
 
-.tab-pane fade {
-  color: pink;
-}
-
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -248,52 +234,37 @@ li.nav-item {
   opacity: 0.7;
 }
 
-
-
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
-
 
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
 
-
 .fa-snapchat {
   background: #eee455;
   color: white;
 }
-
 
 .fa-instagram {
   background: #d62976;
   color: white;
 }
 
-p.copyright-text{ 
-margin-top: 30px;
+p.copyright-text {
+  margin-top: 30px;
 }
 
 btn.btn-primary {
   color: pink;
 }
 
-#pickRandomBtn {
-  color: rgb(255, 255, 255);
-  background-color: coral;
-}
-
-#addNameBtn {
-  color: rgb(255, 255, 255);
-  background-color: coral;
-}
-
 .cart {
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 10px;
   background-color: #f9f9f9;
 }
 
@@ -304,9 +275,9 @@ btn.btn-primary {
 }
 
 img.img-fluid1 {
-  width: 50px;
-  height: 50px;
-padding: right;
+  width: 20px;
+  height: 20px;
+  padding: right;
 }
 
 h3 {
@@ -314,9 +285,27 @@ h3 {
 }
 
 #review {
-  color: rgb(224, 199, 153);
+  color: rgb(0, 0, 0);
+  font-family: "Oswald", sans-serif;
 }
 
 #displayRandomReview {
   margin-top: 100px;
+}
+
+button {
+  color: rgb(246, 213, 153);
+  border: none;
+  margin-top: 30px;
+  box-shadow: inset;
+  padding: 10px 20px;
+  background-color: #fbfcfb;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  margin-top: 30px;
+ font-family: "Kanit", sans-serif; 
 }
