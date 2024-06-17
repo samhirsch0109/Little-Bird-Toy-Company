@@ -85,7 +85,7 @@ function generateToyCards() {
                             <a class="nav-link" style="color: orange" id="side-view-tab-${index}" data-bs-toggle="tab" href="#side-view${index}" role="tab" aria-controls="side-view${index}" aria-selected="false"> Option 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: brown"id="top-view-tab-${index}" data-bs-toggle="tab" href="#top-view${index}" role="tab" aria-controls="top-view${index}" aria-selected="false"> Option 3</a>
+                            <a class="nav-link" style="color: purple"id="top-view-tab-${index}" data-bs-toggle="tab" href="#top-view${index}" role="tab" aria-controls="top-view${index}" aria-selected="false"> Option 3</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="imageTabContent${index}">
@@ -132,7 +132,7 @@ function updateCart() {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
                 <span>${item.name} - $${item.price.toFixed(2)}</span>
-                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove Item</button>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove </button>
             `;
             cartContainer.appendChild(cartItem);
         });
@@ -158,9 +158,9 @@ const reviews = [
     'I was pleasantly surprised, great toys and store had great atmosphere',
     'You should visit the store today',
     'The toys were ok quality',
-    'OMGGGGGGG!!! I am totally getting these for my precious little angels. It will fit perfectly in their netural pallete bedrooms, for display only of course, they are ipad kids lol',
-    'These toys remind me of back in my day without phones when we played with wood, good ol days',
-    'Ouch! they gave me a splinter, oh wait never mind Im okay not a splinter, they are well made toys!'
+    'OMGGGGGGG!!! Im totally getting these for my precious little angels. it will fit perfectly in their netural pallete bedrooms, for display only of course, theyre ipad kids lol',
+    'these toys remind me of back in my day without phones when we played with wood, good ol days',
+    'ouch! they gave me a splinter, oh wait nevermind im okay not a splinter, they are well made toys!'
 ];
 
 function getRandomReview(reviews) {
