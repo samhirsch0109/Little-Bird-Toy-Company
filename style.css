@@ -261,7 +261,7 @@ btn.btn-primary {
   padding: 15px;
   border-radius: 5px;
   margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 5px rgb(255, 161, 99);
 }
 
 .cart-item {
@@ -294,6 +294,7 @@ h3 {
   border: 2px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
+  box-shadow: 5px 5px 5px rgb(255, 161, 99);
 }
 
 .review-box {
@@ -367,9 +368,14 @@ p.three {
 
 .btn.btn-primary {
   background-color: #ef8f13;
-  border-color: rgb(207, 164, 119)
+  border-color: rgb(207, 164, 119);
 }
 
+
+.btn.btn-primary:hover {
+  background-color: #ffbf6b;
+  border-color: rgb(207, 164, 119);
+}
 hr {
   margin-top: 100px;
 }
